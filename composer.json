@@ -1,0 +1,21 @@
+{
+  "name": "balise/deepblue-installer",
+  "type": "composer-plugin",
+  "license": "MIT",
+  "description": "A Wordpress Composer library installer",
+  "keywords": [
+    "WordPress"
+  ],
+  "authors": [
+    {
+      "name": "Simon Mongeau",
+      "email": "simon@balise.ca"
+    }
+  ],
+  "require": {
+    "composer-plugin-api": "^1.1"
+  },
+  "extra": {
+    "class": "Balise\\DeepBlueInstaller"
+  }
+}
