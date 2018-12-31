@@ -1,5 +1,5 @@
 <?php
-namespace Balise\DeepBlueInstaller;
+namespace Balise\DeepblueInstaller;
 
 class WordPressInstaller extends BaseInstaller {
     protected $locations = array(

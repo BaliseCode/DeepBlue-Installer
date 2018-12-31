@@ -1,6 +1,6 @@
 <?php
 
-namespace Balise\DeepBlueInstaller;
+namespace Balise\DeepblueInstaller;
 
 use Composer\Composer;
 use Composer\Installer\BinaryInstaller;
@@ -58,7 +58,7 @@ class Installer extends LibraryInstaller {
             );
         }
 
-        $class     = 'Balise\\DeepBlueInstaller\\' . $this->supportedTypes[$frameworkType];
+        $class     = 'Balise\\DeepblueInstaller\\' . $this->supportedTypes[$frameworkType];
         $installer = new $class($package, $this->composer, $this->getIO());
 
         return $installer->getInstallPath($package, $frameworkType);
