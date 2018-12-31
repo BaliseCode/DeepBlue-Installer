@@ -25,7 +25,14 @@
   "require": {
     "composer-plugin-api": "^1.1"
   },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
   "extra": {
+    "installer-disable": "wordpress",
     "class": "Balise\\DeepblueInstaller\\Plugin" 
   }
 }
