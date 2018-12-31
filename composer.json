@@ -6,7 +6,17 @@
   "keywords": [
     "WordPress"
   ],
+  "autoload": {
+    "psr-4": {
+      "Balise\\DeepBlueInstaller\\": "src"
+    }
+  },
   "authors": [
+    {
+      "name": "Kyle Robinson Young",
+      "email": "kyle@dontkry.com",
+      "homepage": "https://github.com/shama"
+    },
     {
       "name": "Simon Mongeau",
       "email": "simon@balise.ca"
