@@ -1,6 +1,6 @@
 <?php
 
-namespace Balise\DeepblueInstaller;
+namespace Balise\DeepBlueInstaller;
 
 use Composer\Composer;
 use Composer\IO\IOInterface;
