@@ -23,6 +23,7 @@
     }
   ],
   "require": {
+    "vlucas/phpdotenv": "^2.0.1",
     "composer-plugin-api": "^1.1"
   },
   "repositories": [
