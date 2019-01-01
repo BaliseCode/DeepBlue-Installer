@@ -21,8 +21,16 @@ class Installer extends LibraryInstaller {
         'wordpress'     => 'WordPressInstaller',
     );
 
-<<<<<<< HEAD
-=======
+
+    /**
+     * Get I/O object
+     *
+     * @return IOInterface
+     */
+    private function getIO() {
+        return $this->io;
+    }
+
     /**
      * Installer constructor.
      *
@@ -126,15 +134,5 @@ class Installer extends LibraryInstaller {
         }
 
         return $pattern ?: '(\w+)';
-    }
->>>>>>> parent of 389339b... Changed namespaces
-
-    /**
-     * Get I/O object
-     *
-     * @return IOInterface
-     */
-    private function getIO() {
-        return $this->io;
     }
 }
