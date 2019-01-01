@@ -21,6 +21,18 @@ class Installer extends LibraryInstaller {
         'wordpress' => 'WordPressInstaller',
     );
 
+    
+    public function __construct(
+        IOInterface $io,
+        Composer $composer,
+        $type = 'library',
+        Filesystem $filesystem = null,
+        BinaryInstaller $binaryInstaller = null
+    ) {
+        parent::__construct($io, $composer, $type, $filesystem,
+            $binaryInstaller);
+        
+    }
     /**
      * Get I/O object
      *
@@ -44,7 +56,7 @@ class Installer extends LibraryInstaller {
             );
         }
 
-        $class     = 'Balise\\DeepBlueInstaller\\' . $this->supportedTypes[$frameworkType];
+        $class     = 'Balise\\DeepblueInstaller\\' . $this->supportedTypes[$frameworkType];
         $installer = new $class($package, $this->composer, $this->getIO());
 
         return $installer->getInstallPath($package, $frameworkType);
@@ -102,7 +114,7 @@ class Installer extends LibraryInstaller {
     protected function getLocationPattern($frameworkType) {
         $pattern = false;
         if (!empty($this->supportedTypes[$frameworkType])) {
-            $frameworkClass = 'Balise\\DeepBlueInstaller\\' . $this->supportedTypes[$frameworkType];
+            $frameworkClass = 'Balise\\DeepblueInstaller\\' . $this->supportedTypes[$frameworkType];
             /** @var BaseInstaller $framework */
             $framework = new $frameworkClass(null, $this->composer, $this->getIO());
             $locations = array_keys($framework->getLocations());
