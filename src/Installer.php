@@ -1,10 +1,10 @@
 <?php
 
-namespace Balise\DeepBlueInstaller;
+namespace Balise\DeepblueInstaller;
 
 use Composer\Composer;
 use Composer\Installer\BinaryInstaller;
-use Composer\Installer\LibraryInstaller;
+use Composer\Installer\LibraryInstaller; 
 use Composer\IO\IOInterface;
 use Composer\Package\PackageInterface;
 use Composer\Repository\InstalledRepositoryInterface;
