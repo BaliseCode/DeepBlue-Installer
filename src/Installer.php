@@ -1,6 +1,6 @@
 <?php
 
-namespace Balise\DeepBlueInstaller;
+namespace Balise\DeepblueInstaller;
 
 use Composer\Composer;
 use Composer\Installer\BinaryInstaller;
@@ -18,9 +18,8 @@ class Installer extends LibraryInstaller {
      * @var array
      */
     private $supportedTypes = array(
-        'wordpress'     => 'WordPressInstaller',
+        'wordpress' => 'WordPressInstaller',
     );
-
 
     /**
      * Get I/O object
@@ -31,30 +30,7 @@ class Installer extends LibraryInstaller {
         return $this->io;
     }
 
-    /**
-     * Installer constructor.
-     *
-     * Disables installers specified in main composer extra installer-disable
-     * list
-     *
-     * @param IOInterface          $io
-     * @param Composer             $composer
-     * @param string               $type
-     * @param Filesystem|null      $filesystem
-     * @param BinaryInstaller|null $binaryInstaller
-     */
-    public function __construct(
-        IOInterface $io,
-        Composer $composer,
-        $type = 'library',
-        Filesystem $filesystem = null,
-        BinaryInstaller $binaryInstaller = null
-    ) {
-        parent::__construct($io, $composer, $type, $filesystem,
-            $binaryInstaller);
-        $this->removeDisabledInstallers();
-    }
-
+   
     /**
      * {@inheritDoc}
      */
@@ -126,7 +102,7 @@ class Installer extends LibraryInstaller {
     protected function getLocationPattern($frameworkType) {
         $pattern = false;
         if (!empty($this->supportedTypes[$frameworkType])) {
-            $frameworkClass = 'Composer\\Installers\\' . $this->supportedTypes[$frameworkType];
+            $frameworkClass = 'Balise\\DeepBlueInstaller\\' . $this->supportedTypes[$frameworkType];
             /** @var BaseInstaller $framework */
             $framework = new $frameworkClass(null, $this->composer, $this->getIO());
             $locations = array_keys($framework->getLocations());

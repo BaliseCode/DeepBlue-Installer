@@ -12,7 +12,7 @@ abstract class BaseInstaller {
     protected $io;
 
     /**
-     * Initializes base installer.
+     * Initializes base installer. 
      *
      * @param PackageInterface $package
      * @param Composer         $composer
@@ -127,3 +127,4 @@ abstract class BaseInstaller {
         return false;
     }
 }
+ 

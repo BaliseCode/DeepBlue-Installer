@@ -7,9 +7,10 @@ class WordPressInstaller extends BaseInstaller {
         parent::__construct();
     }
     protected $locations = array(
-        'plugin'   => 'wp-content/plugins/{$name}/',
-        'theme'    => 'wp-content/themes/{$name}/',
-        'muplugin' => 'wp-content/mu-plugins/{$name}/',
-        'dropin'   => 'wp-content/{$name}/',
+        'plugin'   => 'app/wp-content/plugins/{$name}/',
+        'theme'    => 'app/wp-content/themes/{$name}/',
+        'muplugin' => 'app/wp-content/mu-plugins/{$name}/',
+        'dropin'   => 'app/wp-content/{$name}/',
     );
 }
+ 
