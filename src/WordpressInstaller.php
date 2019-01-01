@@ -1,7 +1,9 @@
 <?php
 namespace Balise\DeepblueInstaller;
 
-class WordPressInstaller extends Composer\Installers\BaseInstaller {
+use Composer\Installers\BaseInstaller as BaseInstaller;
+
+class WordPressInstaller extends BaseInstaller {
     protected $locations = array(
         'plugin'   => 'wp-content/plugins/{$name}/',
         'theme'    => 'wp-content/themes/{$name}/',
